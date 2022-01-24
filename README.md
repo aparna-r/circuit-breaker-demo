@@ -28,3 +28,5 @@
    - slow: makes call to order service which makes a slow call to payment service
    - default: makes successful call to order service including upstream service
 
+# Codebase
+https://github.com/aparna-r/circuit-breaker-demo 

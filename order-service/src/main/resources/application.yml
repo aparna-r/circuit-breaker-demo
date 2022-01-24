@@ -4,16 +4,16 @@ resilience4j:
   circuitbreaker:
     instances:
       payment-service:
-        register-health-indicator: true
-        sliding-window-type: count_based
+        sliding-window-type: count_based # also time_based possibility
         sliding-window-size: 10
-        failure-rate-threshold: 50
+        failure-rate-threshold: 50 # percent
+        wait-duration-in-open-state: 40s
+        automatic-transition-from-open-to-half-open-enabled: true
         permitted-number-of-calls-in-half-open-state: 5
-        wait-duration-in-open-state: 30s
-        slow-call-rate-threshold: 50
+        slow-call-rate-threshold: 50 # percent
         slow-call-duration-threshold: 2s
         writable-stack-trace-enabled: true
-        automatic-transition-from-open-to-half-open-enabled: true
+        register-health-indicator: true
         recordExceptions:
           - org.springframework.web.client.HttpServerErrorException
 

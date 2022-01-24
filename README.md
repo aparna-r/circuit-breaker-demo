@@ -23,9 +23,8 @@
 - grafana_dashboard.yml: grafana dashboard provided by [resilience4j](https://github.com/resilience4j/resilience4j/blob/master/grafana_dashboard.json)
 
 # Test CircuitBreaker
-- demo.sh
-  Accepts 1 optional parameter. Makes call to order service with one of the types
-  fail: makes call to order service which makes fail call to payment service
-  slow: makes call to order service which makes a slow call to payment service
-  default: makes successful call to order service including upstream service
+- demo.sh: accepts 1 optional parameter. Makes call to order service with one of the types
+   - fail: makes call to order service which makes fail call to payment service
+   - slow: makes call to order service which makes a slow call to payment service
+   - default: makes successful call to order service including upstream service
 
